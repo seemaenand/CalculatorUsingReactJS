@@ -1,36 +1,27 @@
-import Wrapper from "./components/Wrapper";
-import Screen from "./components/Screen";
-import ButtonBox from "./components/ButtonBox";
-import Button from "./components/Button";
-import CalcProvider from "./context/CalcContext";
 
-// button values
-const btnValues = [
-  ["C", "+-", "%", "/"],
-  [7, 8, 9, "x"],
-  [4, 5, 6, "-"],
-  [1, 2, 3, "+"],
-  [0, ".", "="],
-];
+// importing css styles from Styles folder 
+import styles from "./Styles/app.module.css";
 
+// importing Calculator component form Component folder
+import Calculator from "./Components/Calculator";
+
+
+// render app function
 function App() {
+
+  // return the main page of application
   return (
-    <CalcProvider>
-      <Wrapper>
-        <Screen />
-        <ButtonBox>
-          {/* lets map the button values */}
-          {btnValues.flat().map((btn, i) => (
-            <Button
-              value={btn}
-              key={i}
-            />
-          ))}
-        </ButtonBox>
+    // main container 
+    <div className={styles.mainContainer}>
       
-      </Wrapper>
-      
-   </CalcProvider>
+      {/* div containing page heading */}
+      <div className={styles.heading}>
+        <h1>Calculator</h1>
+      </div>
+
+      {/* render the calculator */}
+      <Calculator />    
+    </div>
   );
 }
 

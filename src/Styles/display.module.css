@@ -1,0 +1,40 @@
+
+/* screen of calculator */
+.display{
+    margin: 0;
+    height: 35%;
+    width: 98%;
+    padding: 1%;
+    background-color: #F1F0E8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2.6rem;
+    font-weight: 400;
+    word-break: break-word;
+}
+
+
+/* direct children  */
+.display > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+/* input section of display */
+.inputSection{
+    height: 75%;
+    overflow-y: auto;
+}
+
+
+/* output section of display */
+.outputSection{
+    height: 25%;
+    font-size: 2.1rem;
+    color: grey;
+}
